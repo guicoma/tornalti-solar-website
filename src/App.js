@@ -9,8 +9,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-              <img src={logo} alt="logo" />
-              <h1>Tornaltí Solar</h1>
+        <img src={logo} alt="logo" />
+        <h1>Tornaltí Solar</h1>
         {/* <GradientBox background="radial-gradient(circle at 25% 25%, #ffe200 0%, #ffe200 10%, transparent 10%)"> */}
           {/* <GradientBox background="linear-gradient(135deg, transparent 39%, #39a4c5 39%)">
             <GradientBox background="linear-gradient(150deg, transparent 52%, #008ab4 52%)">
