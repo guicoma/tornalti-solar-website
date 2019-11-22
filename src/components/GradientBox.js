@@ -8,6 +8,7 @@ const GradientBox = styled('div')(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'white',
     background: 'linear-gradient(150deg, white 52%, #008ab4 52%)',
   },
   layout,
