@@ -11,7 +11,7 @@ jobs:
     # Converts todos into issues
     # - name: todo-actions
     #   uses: dtinth/todo-actions@v0.2.0
-    
+
       - uses: "actions/checkout@master"
       - name: "TODO to Issue"
         uses: "alstr/todo-to-issue-action@master"
@@ -20,6 +20,6 @@ jobs:
           BEFORE: ${{ github.event.before }}
           SHA: ${{ github.sha }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABEL: "# TODO"
-          COMMENT_MARKER: "#"
+          LABEL: "/** TODO"
+          COMMENT_MARKER: "* "
         id: "todo"
