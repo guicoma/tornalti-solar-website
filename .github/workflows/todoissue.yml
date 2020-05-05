@@ -1,2 +1,25 @@
-- name: todo-actions
-  uses: dtinth/todo-actions@v0.2.0
+name: TODO -> GH issues
+
+on: [push, pull_request] # Run on Push and Pull Requests
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Converts todos into issues
+    # - name: todo-actions
+    #   uses: dtinth/todo-actions@v0.2.0
+    
+      - uses: "actions/checkout@master"
+      - name: "TODO to Issue"
+        uses: "alstr/todo-to-issue-action@master"
+        with:
+          REPO: ${{ github.repository }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LABEL: "# TODO"
+          COMMENT_MARKER: "#"
+        id: "todo"
