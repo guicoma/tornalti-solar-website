@@ -73,14 +73,20 @@ class App extends Component {
                   <Home />
                 </Route>
               </Switch> */}
-              {/* TODO: Cover image + brief company/project description */}
+              {/** TODO: Cover image + brief company/project description **/}
               <p>
               Tornaltí es una empresa de energías renovables que se constituyó el 27 de noviembre de 2018, y está formada por varios profesionales del sector.
 A día de hoy, la empresa tiene en tramitación tres proyectos fotovoltaicos en la isla de Menorca correspondientes a 2 MWp/cu, cuyo objetivo es contribuir en la aceleración energética de la isla, dada la escasa implantación de este tipo de tecnologías en este territorio.
               </p>
             </Pane>
             <Pane>
-              {/* TODO: create contact form layout */}
+              {
+                /** TODO: create contact form layout
+                 * Include `name`, `mail` and `message`
+                 * Important to have also a CAPTCHA included
+                 * 
+                **/
+              }
               <TextInput placeholder="Nombre" />
               <TextInput placeholder="Correo" />
               <Textarea name="message" placeholder="🖋 Escribanos su mensaje" />
