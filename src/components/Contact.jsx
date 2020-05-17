@@ -64,7 +64,7 @@ class Contact extends Component {
             <Form {...layout} size="large" name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
               <Form.Item
                 name={['user', 'name']}
-                label="Name"
+                label="Nombre"
                 placeholder="Nombre"
                 rules={[
                   {
