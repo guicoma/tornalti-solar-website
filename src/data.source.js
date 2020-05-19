@@ -2,8 +2,8 @@ import React from 'react';
 
 import imageLogo from './assets/logo_tornalti.svg';
 import imageLogoText from './assets/logo_icon_text.svg';
-import imageMap from './assets/menorca_outline_blue.png';
-import imageMap2 from './assets/menorca_outline_blue_markers.png';
+// import imageMap from './assets/menorca_outline_blue.png';
+import imageMap from './assets/menorca_outline_blue_markers.png';
 import iconCiutadella from './assets/icon_ciut.png';
 import iconMao from './assets/icon_mao.png';
 import iconBinibequer from './assets/icon_bini.png';
@@ -147,7 +147,7 @@ export const Content0DataSource = {
         className: 'map-wrapper',
         image: {
             className: 'map',
-            children: imageMap2
+            children: imageMap
         },
         labels: [
             { className: 'point1', children: ''},
