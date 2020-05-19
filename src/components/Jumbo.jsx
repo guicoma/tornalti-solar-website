@@ -6,7 +6,6 @@ import { getChildrenToRender } from '../utils';
 import imageJumbo from '../assets/iso_panels2.png';
 import imageCloud1 from '../assets/cloud1.png';
 import imageCloud2 from '../assets/cloud2.png';
-import imageSun from '../assets/sun.png';
 
 class Banner5 extends React.PureComponent {
   render() {

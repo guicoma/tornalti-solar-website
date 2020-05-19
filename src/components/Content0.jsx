@@ -1,6 +1,5 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
 import Tilt from 'react-tilt';
 import { Row, Col } from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
@@ -20,15 +19,6 @@ class Content extends React.PureComponent {
       mapWrapper,
       childWrapper,
     } = dataSource;
-    const animType = {
-        queue: 'bottom',
-        one: {
-          y: '+=30',
-          opacity: 0,
-          type: 'from',
-          ease: 'easeOutQuad',
-        },
-    };
     return (
       <div {...props} {...wrapper}>
         <div {...page}>
