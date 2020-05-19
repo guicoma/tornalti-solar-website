@@ -10,7 +10,7 @@ import imageSun from '../assets/sun.png';
 
 class Banner5 extends React.PureComponent {
   render() {
-    const { ...tagProps } = this.props;
+    const { isMobile, ...tagProps } = this.props;
     const { dataSource } = tagProps;
     delete tagProps.dataSource;
     const animType = {
@@ -39,7 +39,7 @@ class Banner5 extends React.PureComponent {
             {dataSource.childWrapper.children.map(getChildrenToRender)}
           </QueueAnim>
           <TweenOne animation={animType.one} key="title" {...dataSource.image}>
-            <img src={imageJumbo} width="100%" alt="img" />
+            {!isMobile && <img src={imageJumbo} width="100%" alt="img" />}
             <img src={imageCloud1} className="cloud1" alt="cloud1" />
             <img src={imageCloud2} className="cloud2" alt="cloud2" />
             {/* <img src={imageSun} className="sun" alt="sun" /> */}

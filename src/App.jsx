@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import {isMobile} from "react-device-detect";
+
 import Navbar from './components/Navbar';
 import Jumbo from './components/Jumbo';
 import Content0 from './components/Content0';
@@ -44,26 +46,31 @@ class App extends Component {
         id="Navbars_0"
         key="Navbars_0"
         dataSource={NavbarDataSource}
+        isMobile={isMobile}
       />,
       <Jumbo
         id="Jumbo_0"
         key="Jumbo_0"
         dataSource={JumboDataSource}
+        isMobile={isMobile}
       />,
       <Content0
         id="Content0_0"
         key="Content0_0"
         dataSource={Content0DataSource}
+        isMobile={isMobile}
       />,
       <Contact
         id="Contact"
         key="Contact"
         dataSource={ContactDataSource}
+        isMobile={isMobile}
       />,
       <Footer
         id="Footer0_0"
         key="Footer0_0"
         dataSource={FooterDataSource}
+        isMobile={isMobile}
       />,
     ];
     return (  

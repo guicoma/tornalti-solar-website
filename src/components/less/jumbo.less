@@ -97,13 +97,13 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media @tablet-down {
   .@{jumbo} {
-    min-height: 500px;
+    min-height: 350px;
+    height: auto;
 
     & &-page.home-page {
-      padding-top: 1px;
-      padding-bottom: 0;
+      padding: 1px 60px 0;
     }
 
     &-title-wrapper {
@@ -111,6 +111,7 @@
       position: static;
       width: 100%;
       margin-top: 64px;
+      margin-bottom: 32px;
       left: 0;
       top: 0;
     }
@@ -128,11 +129,14 @@
     }
 
     &-image {
-      position: static;
+      position: absolute;
       width: 100%;
       top: 0;
       right: 0;
-      margin: 82px 0 24px;
+      margin: 132px 0 0;
+      .cloud2 {
+        left: 75%;
+      }
     }
   }
 }

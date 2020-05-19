@@ -124,7 +124,7 @@ export const JumboDataSource = {
           href: '#',
           className: 'jumbo-button',
           type: 'primary',
-          children: 'Contacte',
+          children: 'Contacto',
         },
       },
     ],
@@ -351,19 +351,19 @@ export const FooterDataSource = {
             ],
           },
         },
-        {
-          name: 'block1',
-          xs: 24,
-          md: 6,
-          className: 'block',
-          title: { children: 'Sitemap' },
-          childWrapper: {
-            children: [
-              { name: 'link0', href: '#', children: 'Proyectos' },
-              { name: 'link1', href: '#', children: 'Contacto' },
-            ],
-          },
-        },
+        // {
+        //   name: 'block1',
+        //   xs: 24,
+        //   md: 6,
+        //   className: 'block',
+        //   title: { children: 'Sitemap' },
+        //   childWrapper: {
+        //     children: [
+        //       { name: 'link0', href: '#', children: 'Proyectos' },
+        //       { name: 'link1', href: '#', children: 'Contacto' },
+        //     ],
+        //   },
+        // },
         // {
         //   name: 'block2',
         //   xs: 24,
