@@ -100,7 +100,7 @@ class Contact extends Component {
                 </Row>
                 <Row>
                   <Col xs={{span: 24}} sm={{span: 8}} >
-                    <Button type="primary" htmlType="submit" block>
+                    <Button id='submitContact' type="primary" htmlType="submit" block>
                       Submit
                     </Button>
                   </Col>

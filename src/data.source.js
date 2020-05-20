@@ -23,7 +23,7 @@ export const NavbarDataSource = {
         name: 'item0',
         className: 'navbar-item',
         children: {
-          href: '#',
+          href: '#projects',
           children: [{ children: 'Proyectos', name: 'text' }],
         }
       },
@@ -31,7 +31,7 @@ export const NavbarDataSource = {
         name: 'item1',
         className: 'navbar-item',
         children: {
-          href: '#',
+          href: '#Footer0_0',
           children: [{ children: 'Contacto', name: 'text' }],
         },
       },
@@ -140,6 +140,7 @@ export const Content0DataSource = {
     description: { className: 'description' },
     OverPack: { playScale: 0.1, className: 'triage-wrapper' },
     titleWrapper: {
+      id: 'projects',
       className: 'title-wrapper',
       children: [{ name: 'title', children: 'Proyectos' }],
     },
@@ -320,6 +321,7 @@ export const Content0DataSource = {
 
 export const ContactDataSource = {
   titleWrapper: {
+    id: 'contactTitle',
     className: 'title-wrapper',
     children: [{ name: 'title', children: 'Contacto' }],
   },

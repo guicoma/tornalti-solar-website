@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from '../utils';
@@ -20,11 +20,18 @@ class Navbar extends React.Component {
     });
   };
 
+  
+  handleClick = (event) => {
+    event.preventDefault();
+    let target = document.getElementById(event.target.attributes.href.value.substr(1));
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   render() {
     const { dataSource, isMobile, ...props } = this.props;
     const { phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
-    const navChildren = navData.map((item) => {
+    const navChildren = navData.map((item, index, array) => {
       const { children: a, subItem, ...itemProps } = item;
       if (subItem) {
         return (
@@ -63,7 +70,7 @@ class Navbar extends React.Component {
       }
       return (
         <Item key={item.name} {...itemProps}>
-          <a {...a} className={`navbar-item-block ${a.className}`.trim()}>
+          <a {...a} onClick={this.handleClick} className={`navbar-item-block ${a.className}`.trim()}>
             {a.children.map(getChildrenToRender)}
           </a>
         </Item>
