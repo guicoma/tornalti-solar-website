@@ -24,9 +24,11 @@ class Content extends React.PureComponent {
         <div {...page}>
           <div {...description}>
             <img src={imageSun} alt='description' />
-            <p style={{fontSize: '18px'}}>
-            Tornaltí es una empresa de energías renovables formada por varios profesionales del sector. A día de hoy, la empresa tiene en tramitación tres proyectos fotovoltaicos en la isla de Menorca correspondientes a 2 MWp/cu, cuyo objetivo es contribuir en la aceleración energética de la isla.
-            </p>
+            <div style={{fontSize: '18px'}}>
+              <p>
+              Tornaltí es una empresa de energías renovables formada por varios profesionales del sector. Con el compromiso con la isla de Menorca contra el cambio climático y aportar a su plan de descarbonización.</p><p>A día de hoy, la empresa tiene en tramitación tres proyectos fotovoltaicos en la isla de Menorca correspondientes a 2 MWp/cu, cuyo objetivo es contribuir, de manera integrada y descentralizada, en la aceleración energética de la isla.
+              </p>
+            </div>
           </div>
           <div {...titleWrapper}>
             {titleWrapper.children.map(getChildrenToRender)}
