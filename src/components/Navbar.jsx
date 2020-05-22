@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from '../utils';
