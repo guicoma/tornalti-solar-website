@@ -1,9 +1,55 @@
+@waves: waves;
+
 .footer-wrapper {
-  background: @template-bg-color;
+  background: aliceblue;
   overflow: hidden;
   position: relative;
   min-height: 360px;
   color: @template-footer-text-color;
+  .@{waves}{
+    position: relative;
+    height: 300px;
+    & .wave-1 {
+      position: absolute;
+      top: 20px;
+      background-image: url('../../../../assets/wave_1.svg');
+      background-size: cover;
+      background-position: 100% 0%;
+      height: 110px;
+      width: 100vw;
+      animation: wave 15s linear infinite;
+    }
+    & .wave-2 {
+      position: absolute;
+      top: 75px;
+      background-image: url('../../../../assets/wave_2.svg');
+      background-size: cover;
+      background-position: 100% 0%;
+      height: 110px;
+      width: 100vw;
+      animation: wave 40s linear infinite;
+    }
+    & .wave-3 {
+      position: absolute;
+      top: 125px;
+      background-image: url('../../../../assets/wave_3.svg');
+      background-size: cover;
+      background-position: 100% 0%;
+      height: 110px;
+      width: 100vw;
+      animation: wave 90s linear infinite;
+    }
+    & .wave-4 {
+      position: absolute;
+      top: 195px;
+      background-image: url('../../../../assets/wave_4.svg');
+      background-size: cover;
+      background-position: 100% 0%;
+      height: 110px;
+      width: 100vw;
+      animation: wave 190s linear infinite;
+    }
+  }
   .footer {
     .home-page {
       padding: 64px 24px 80px;
@@ -34,6 +80,7 @@
   }
   .copyright-wrapper {
     width: 100%;
+    background: @template-bg-color;
     border-top: 1px solid fade(@line-color, 10);
     .home-page {
       padding: 0 24px;
@@ -94,5 +141,14 @@
         width: 90%;
       }
     }
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }

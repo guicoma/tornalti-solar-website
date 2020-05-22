@@ -20,13 +20,6 @@ class Navbar extends React.Component {
     });
   };
 
-  
-  handleClick = (event) => {
-    event.preventDefault();
-    let target = document.getElementById(event.target.attributes.href.value.substr(1));
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   render() {
     const { dataSource, isMobile, ...props } = this.props;
     const { phoneOpen } = this.state;
@@ -70,7 +63,7 @@ class Navbar extends React.Component {
       }
       return (
         <Item key={item.name} {...itemProps}>
-          <a {...a} onClick={this.handleClick} className={`navbar-item-block ${a.className}`.trim()}>
+          <a {...a} className={`navbar-item-block ${a.className}`.trim()}>
             {a.children.map(getChildrenToRender)}
           </a>
         </Item>

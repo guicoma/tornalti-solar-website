@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+    console.log('asd:', isMobile)
     if (location.port) {
       setTimeout(() => {
         this.setState({

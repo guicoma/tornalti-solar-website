@@ -43,7 +43,7 @@ class Contact extends Component {
     };
 
     render() { 
-        const { dataSource, ...props } = this.props;
+        const { dataSource, isMobile, ...props } = this.props;
         const { titleWrapper } = dataSource;
         const validateMessages = {
             required: '${label} is required!',

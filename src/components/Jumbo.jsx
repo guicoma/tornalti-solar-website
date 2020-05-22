@@ -8,8 +8,17 @@ import imageCloud1 from '../assets/cloud1.png';
 import imageCloud2 from '../assets/cloud2.png';
 
 class Banner5 extends React.PureComponent {
+
+
+  handleClick = (event) => {
+    event.preventDefault();
+    let target = document.getElementById('Contact');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+
   render() {
-    const { isMobile, ...tagProps } = this.props;
+    const { ...tagProps } = this.props;
     const { dataSource } = tagProps;
     delete tagProps.dataSource;
     const animType = {
@@ -38,7 +47,7 @@ class Banner5 extends React.PureComponent {
             {dataSource.childWrapper.children.map(getChildrenToRender)}
           </QueueAnim>
           <TweenOne animation={animType.one} key="title" {...dataSource.image}>
-            {!isMobile && <img src={imageJumbo} width="100%" alt="img" />}
+            <img src={imageJumbo} className="panels" width="100%" alt="img" />
             <img src={imageCloud1} className="cloud1" alt="cloud1" />
             <img src={imageCloud2} className="cloud2" alt="cloud2" />
             {/* <img src={imageSun} className="sun" alt="sun" /> */}
