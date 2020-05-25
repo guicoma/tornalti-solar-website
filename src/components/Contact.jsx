@@ -14,6 +14,7 @@ const layout = {
 };
 
 const recaptchaRef = React.createRef();
+const [form] = Form.useForm();
 
 class Contact extends Component {
     state = { 
@@ -21,7 +22,7 @@ class Contact extends Component {
         email: '',
         message: ''
     };
-
+    
     onChange = (value) => {
       console.log("Captcha value:", value);
     }
@@ -36,9 +37,10 @@ class Contact extends Component {
           data:  values.user
         }).then((response)=>{
           if (response.data.status === 'success'){
-            message.success('This is a prompt message for success, and it will disappear in 10 seconds', 5);
+            message.success('Su mensaje ha sido enviado correctamente. Gracias.', 5);
+            form.resetFields();
           }else if(response.data.status === 'fail'){
-            message.error ('This is a prompt message for success, and it will disappear in 10 seconds', 5);
+            message.error ('Ha habido un error en el envío, intente de nuevo más tarde. Gracias', 5);
           }
         })
     };
@@ -58,7 +60,7 @@ class Contact extends Component {
             <div {...titleWrapper}>
               {titleWrapper.children.map(getChildrenToRender)}
             </div>
-            <Form {...layout} size="large" name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
+            <Form {...layout} form={form} size="large" name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
               <Form.Item
                 name={['user', 'name']}
                 label="Nombre"
