@@ -32,7 +32,7 @@ class Contact extends Component {
         console.log(recaptchaValue);
         axios({
           method: "POST", 
-          url:"https://tornaltisolar.com:3002/send", 
+          url:"https://tornaltisolar.com/index.php", 
           data:  values.user
         }).then((response)=>{
           if (response.data.status === 'success'){
