@@ -19,7 +19,8 @@ class Contact extends Component {
     state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      sending: false,
     };
     formRef = React.createRef();
     
@@ -28,8 +29,9 @@ class Contact extends Component {
     }
 
     onFinish = values => {
-        console.log(values);
+        this.setState({sending:true});
         const recaptchaValue = recaptchaRef.current.getValue();
+        console.log('sending:',values);
         console.log(recaptchaValue);
         axios({
           method: "POST", 
@@ -42,7 +44,7 @@ class Contact extends Component {
           }else if(response.data.status === 'fail'){
             message.error ('Ha habido un error en el envío, intente de nuevo más tarde. Gracias', 5);
           }
-        })
+        }).finally(()=>{this.setState({sending:false})})
     };
 
     render() { 
@@ -103,7 +105,7 @@ class Contact extends Component {
                 </Row>
                 <Row>
                   <Col xs={{span: 24}} sm={{span: 8}} >
-                    <Button id='submitContact' type="primary" htmlType="submit" block>
+                    <Button id='submitContact' type="primary" htmlType="submit" loading={this.state.sending} block>
                       Submit
                     </Button>
                   </Col>
