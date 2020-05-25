@@ -9,6 +9,7 @@ $_POST = json_decode($rest_json, true);
 $errors = array();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $name = $_POST['name'];
     $email = $_POST['email'];
 
     if (empty($_POST['message'])) {
@@ -22,11 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $emailBody = "
     <html>
     <head>
-        <title>$email is contacting you</title>
+        <title>$name is contacting you</title>
     </head>
     <body style=\"background-color:#fafafa;\">
         <div style=\"padding:20px;\">
         Date: <span style=\"color:#888\">$date</span>
+        <br>
+        Name: <span style=\"color:#888\">$name</span>
         <br>
         Email: <span style=\"color:#888\">$email</span>
         <br>
