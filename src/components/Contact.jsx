@@ -28,7 +28,8 @@ class Contact extends Component {
 
     onFinish = values => {
         console.log(values);
-        recaptchaRef.current.execute();
+        const recaptchaValue = recaptchaRef.current.getValue();
+        console.log(recaptchaValue);
         axios({
           method: "POST", 
           url:"http://localhost:3002/send", 
