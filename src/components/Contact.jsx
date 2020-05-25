@@ -33,7 +33,7 @@ class Contact extends Component {
         axios({
           method: "POST", 
           url:"https://tornaltisolar.com:3002/send", 
-          data:  this.state
+          data:  values.user
         }).then((response)=>{
           if (response.data.status === 'success'){
             message.success('This is a prompt message for success, and it will disappear in 10 seconds', 5);
