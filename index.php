@@ -39,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     </html>
     ";
 
-    $headers = 	'From: Contact Form <noreply@tornaltisolar.com>' . "\r\n" .
+    $headers = 	'From: Contact Form <contact@tornaltisolar.com>' . "\r\n" .
     "Reply-To: $email" . "\r\n" .
     "MIME-Version: 1.0\r\n" . 
     "Content-Type: text/html; charset=iso-8859-1\r\n";
 
-    $to = 'gcoma@tornaltisolar.com';
-    $subject = 'Contacting you';
+    $to = 'contact@tornaltisolar.com';
+    $subject = 'Contact from Tornalti website';
 
     if (mail($to, $subject, $emailBody, $headers)) {
         $sent = true;	
