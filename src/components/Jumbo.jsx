@@ -3,7 +3,8 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import { getChildrenToRender } from '../utils';
 
-import imageJumbo from '../assets/iso_panels2.png';
+// import imageJumbo from '../assets/iso_panels2.png';
+import imageJumbo from '../assets/iso-panels-sheep.png';
 import imageCloud1 from '../assets/cloud1.png';
 import imageCloud2 from '../assets/cloud2.png';
 
