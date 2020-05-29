@@ -1,7 +1,7 @@
 import React from 'react';
 
 import imageLogo from './assets/logo_tornalti.svg';
-import imageLogoText from './assets/logo_icon_text.svg';
+import imageLogoText from './assets/logo_icon_text.png';
 // import imageMap from './assets/menorca_outline_blue.png';
 import imageMap from './assets/menorca_outline_blue_markers.png';
 import iconCiutadella from './assets/icon_ciut.png';
